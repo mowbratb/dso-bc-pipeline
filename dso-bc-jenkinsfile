@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Application repository') {
             steps {
-                echo "Cloning application repository"
+                echo "Cloning app repository"
                 //TODO("Lab 3 - Introduction to Automated Builds"): add github url
                 sh 'git clone https://github.com/mowbratb/afs-labs.git'
                 //TODO("Lab 4 - Artifact Management"): add an environment variable
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Application docker build') {
             steps {
-                echo "Building application image"
+                echo "Building app image"
                 //TODO("Lab 4 - Artifact Management"): build the docker app image
             }
             //TODO("Lab 4 - Artifact Management"): clean local docker app image
