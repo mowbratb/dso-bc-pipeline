@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Database docker build') {
             steps {
-                echo "Building database image"
+                echo "Building db image"
                 //TODO("Lab 4 - Artifact Management"): build the docker db image
             }
             //TODO("Lab 4 - Artifact Management"): clean local docker db image
