@@ -53,7 +53,7 @@ pipeline {
                 }
             }
         }
-         stage('Security scanning $APP_IMAGE_NAME') {
+         stage('Security scanning App') {
                   steps {
                        withCredentials([usernamePassword(credentialsId: 'bmowbray-harbor-auth', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                             echo "Scanning $APP_IMAGE_NAME image"
@@ -92,7 +92,7 @@ pipeline {
             
         }
         //TODO("Lab 7 - Automated Security Scans"): add a stage
-        stage('Security scanning $DB_IMAGE_NAME' ) {
+        stage('Security scanning DB' ) {
                   steps {
                        withCredentials([usernamePassword(credentialsId: 'bmowbray-harbor-auth', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                             echo "Scanning $APP_IMAGE_NAME image"
