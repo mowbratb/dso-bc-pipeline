@@ -63,7 +63,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deployment stage"
-                //TODO("Lab 5 - Deploy to EKS"): deploy docker images
+                //TODO("Lab 5 - Deploy to EKS"): deploy docker images adding comment
                 sh 'kubectl -n bmowbray set image deployment/app-deployment app-deployment=$HARBOR_REGISTRY/$HARBOR_PROJECT/$APP_IMAGE_NAME:$COMMIT_HASH-$PIPELINE_HASH'
             }
         }
